@@ -14,7 +14,11 @@ pageClass: routes
 
 ### 文章更新
 
-<Route author="hoilc" example="/google/sites/outlierseconomics" path="/google/sites/:id" :paramsDesc="['Site ID, 可在 URL 中找到']" radar="1" />
+<Route author="hoilc" example="/google/sites/outlierseconomics" path="/google/sites/:id" :paramsDesc="['Site ID, 可在 URL 中找到']" radar="1" rssbud="1"/>
+
+## Gwern Branwen
+
+<Route author="cerebrater" example="/gwern/newest" path="/gwern/:category" :paramsDesc="['網誌主頁的分類訊息']"/>
 
 ## Hedwig.pub
 
@@ -102,7 +106,7 @@ pageClass: routes
 
 ### 文章
 
-<Route author="changlan" example="/blogs/jianning" path="/blogs/jianning" radar="1"/>
+<Route author="changlan" example="/blogs/jianning" path="/blogs/jianning" radar="1" rssbud="1"/>
 
 ## 敬维博客
 

@@ -234,7 +234,7 @@ Tag
 
 ### 分类资讯
 
-<Route author="luyuhuang" example="/ithome/it" path="/ithome/:caty" :paramsDesc="['类别']" radar="1">
+<Route author="luyuhuang" example="/ithome/it" path="/ithome/:caty" :paramsDesc="['类别']" radar="1" rssbud="1">
 
 | it      | soft     | win10      | iphone      | ipad      | android      | digi     | next     |
 | ------- | -------- | ---------- | ----------- | --------- | ------------ | -------- | -------- |
@@ -244,7 +244,7 @@ Tag
 
 ### 热榜
 
-<Route author="immmortal luyuhuang" example="/ithome/ranking/24h" path="/ithome/ranking/:type" :paramsDesc="['类别']" radar="1">
+<Route author="immmortal luyuhuang" example="/ithome/ranking/24h" path="/ithome/ranking/:type" :paramsDesc="['类别']" radar="1" rssbud="1">
 
 | 24h           | 7days    | monthly |
 | ------------- | -------- | ------- |
@@ -296,19 +296,19 @@ Tag
 
 ### 最新排序
 
-<Route author="xyqfer Cerebrater" example="/matters/latest" path="/matters/latest" radar="1"/>
+<Route author="xyqfer Cerebrater" example="/matters/latest" path="/matters/latest" radar="1" rssbud="1"/>
 
 ### 熱門文章
 
-<Route author="Cerebrater" example="/matters/hot" path="/matters/hot" radar="1"/>
+<Route author="Cerebrater" example="/matters/hot" path="/matters/hot" radar="1" rssbud="1"/>
 
 ### 标签
 
-<Route author="Cerebrater" example="/matters/tags/VGFnOjk3Mg" path="/matters/tags/:tid" :paramsDesc="['標籤 id，可在標籤所在的 URL 找到']" radar="1"/>
+<Route author="Cerebrater" example="/matters/tags/VGFnOjk3Mg" path="/matters/tags/:tid" :paramsDesc="['標籤 id，可在標籤所在的 URL 找到']" radar="1" rssbud="1"/>
 
 ### 作者
 
-<Route author="Cerebrater" example="/matters/author/az" path="/matters/author/:uid" :paramsDesc="['作者 id，可在作者主頁的 URL 找到']" radar="1"/>
+<Route author="Cerebrater" example="/matters/author/az" path="/matters/author/:uid" :paramsDesc="['作者 id，可在作者主頁的 URL 找到']" radar="1" rssbud="1"/>
 
 ## MIT 科技评论
 
@@ -477,6 +477,18 @@ Supported sub-sites:
 
 <Route author="hillerliao" example="/8btc/news/flash" path="/8btc/news/flash"/>
 
+## 八阕
+
+### 广角新闻
+
+<Route author="nczitzk" example="/popyard" path="/popyard/:caty?" :paramsDesc="['分类, 默认为全景']">
+
+| 全景 | 中国 | 国际 | 科教 | 军事 | 体育 | 娱乐 | 艺术 | 文史 | 观点 | 生活 | 产经 | 其它 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    | 9    | 10   | 11   | 12   |
+
+</Route>
+
 ## 百度知道日报
 
 ### 精选
@@ -502,6 +514,10 @@ Supported sub-sites:
 ### 欅坂 46 博客
 
 <Route author="nwindz" example="/keyakizaka46/blog" path="/keyakizaka46/blog" />
+
+### 櫻坂 46 博客
+
+<Route author="victor21813" example="/sakurazaka46/blog" path="/sakurazaka46/blog" />
 
 ### 日向坂 46 新闻
 
@@ -701,6 +717,12 @@ area 分区选项
 
 </Route>
 
+## 高科技行业门户
+
+### 新闻
+
+<Route author="luyuhuang" example="/ofweek/news" path="/ofweek/news"/>
+
 ## 谷歌新闻
 
 ### 新闻
@@ -751,7 +773,7 @@ area 分区选项
 
 ### 标签，栏目，分类
 
-<Route author="WenhuWee emdoe SivaGao HenryQW" example="/qdaily/column/59" path="/qdaily/:type/:id" :paramsDesc="['类型，见下表', '对应 id，可在 URL 找到']" radar="1">
+<Route author="WenhuWee emdoe SivaGao HenryQW" example="/qdaily/column/59" path="/qdaily/:type/:id" :paramsDesc="['类型，见下表', '对应 id，可在 URL 找到']" radar="1" rssbud="1">
 
 | 标签 | 栏目   | 分类     |
 | ---- | ------ | -------- |
@@ -879,23 +901,21 @@ area 分区选项
 
 ## 巨潮资讯
 
-### 公司公告
+<Route author="LogicJake hillerliao laampui" example="/cninfo/stock_announcement/szse/000002/gssz0000002/category_ndbg_szsh" path="/cninfo/announcement/:column/:code/:orgId/:category?" :paramsDesc="['szse 深圳证券交易所; sse 上海证券交易所; third 新三板; hke 港股; fund 基金', '股票或基金代码', 'orgId 组织 id', '公告分类，A 股及新三板']">
 
-<Route author="LogicJake" example="/cninfo/stock_announcement/000410" path="/cninfo/stock_announcement/:code" :paramsDesc="['股票代码']"/>
+column 为 szse 或 sse 时可选的 category:
 
-### 公司公告 - A 股港股
+| 年报               | 半年报              | 一季报              | 三季报              | 业绩预告              | 权益分派               | 董事会              | 监事会              | 股东大会           | 日常经营           | 公司治理           | 中介报告         | 首发             | 增发             | 股权激励           | 配股             | 解禁             | 公司债             | 可转债             | 其他融资           | 股权变动           | 补充更正           | 澄清致歉           | 风险提示           | 特别处理和退市       | 退市整理期          |
+| ------------------ | ------------------- | ------------------- | ------------------- | --------------------- | ---------------------- | ------------------- | ------------------- | ------------------ | ------------------ | ------------------ | ---------------- | ---------------- | ---------------- | ------------------ | ---------------- | ---------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | -------------------- | ------------------- |
+| category_ndbg_szsh | category_bndbg_szsh | category_yjdbg_szsh | category_sjdbg_szsh | category_yjygjxz_szsh | category_qyfpxzcs_szsh | category_dshgg_szsh | category_jshgg_szsh | category_gddh_szsh | category_rcjy_szsh | category_gszl_szsh | category_zj_szsh | category_sf_szsh | category_zf_szsh | category_gqjl_szsh | category_pg_szsh | category_jj_szsh | category_gszq_szsh | category_kzzq_szsh | category_qtrz_szsh | category_gqbd_szsh | category_bcgz_szsh | category_cqdq_szsh | category_fxts_szsh | category_tbclts_szsh | category_tszlq_szsh |
 
-<Route author="LogicJake hillerliao" example="/cninfo/announcement/002024/gqjl" path="/cninfo/announcement/:code/:category?" :paramsDesc="['股票代码, 若不指定公司则填 all', '公告分类，对A股有效如 gqjl 表示 股权激励 分类']">
+column 为 third 时可选的 category:
 
-| 年报 | 半年报 | 一季报 | 三季报 | 业绩预告 | 权益分派 | 董事会 | 监事会 | 股东大会 | 日常经营 | 公司治理 | 中介报告 | 首发 | 增发 | 股权激励 | 配股 | 解禁 | 债券 | 其他融资 | 股权变动 | 补充更正 | 澄清致歉 | 风险提示 | 特别处理和退市 |
-| ---- | ------ | ------ | ------ | -------- | -------- | ------ | ------ | -------- | -------- | -------- | -------- | ---- | ---- | -------- | ---- | ---- | ---- | -------- | -------- | -------- | -------- | -------- | -------------- |
-| ndbg | bndbg  | yjdbg  | sjdbg  | yjygjxz  | qyfpxzcs | dshgg  | jshgg  | gddh     | rcjy     | gszl     | zj       | sf   | zf   | gqjl     | pg   | jj   | zq   | qtrz     | gqbd     | bcgz     | cqdq     | fxts     | tbclts         |
+| 临时公告      | 定期公告      | 中介机构公告  | 持续信息披露  | 首次信息披露  |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| category_lsgg | category_dqgg | category_zjjg | category_cxpl | category_scpl |
 
 </Route>
-
-### 基金公告
-
-<Route author="hillerliao" example="/cninfo/fund_announcement/159977/基金合同" path="/cninfo/fund_announcement/:code/:searchkey" :paramsDesc="['基金代码, 若不指定则填 all', '过滤词，若不指定则填all']"/>
 
 ## 决胜网
 
@@ -949,6 +969,30 @@ area 分区选项
 ### 节目
 
 <Route author="xyqfer" example="/laosiji/hotshow/128" path="/laosiji/hotshow/:id" :paramsDesc="['节目 id']"/>
+
+## 妈咪帮
+
+<Route author="nczitzk" example="/mamibuy" path="/mamibuy/:caty?/:age?/:sort?" :paramsDesc="['分类，见下表，默认为全分類', '岁数，见下表，默认为不限', '排序，见下表，默认为最新']">
+
+分类
+
+| 全分類 | 小兒醫護 | 幼兒教育 | 育兒成長 | 母乳餵哺 | 寶寶飲食 | 用品交流 | 女人聊天 | 居家生活 | 親子旅遊 / 好去處 | 媽咪扮靚 | 生活閒談 | 懷孕交流 |
+| ------ | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | ----------------- | -------- | -------- | -------- |
+| 0      | 1        | 2        | 3        | 4        | 5        | 6        | 7        | 8        | 9                 | 10       | 11       | 12       |
+
+岁数
+
+| 不限 | 懷孕中 | 生產後 | 0~1 歲 | 1~3 歲 | 3~6 歲 | 6 歲以上 |
+| ---- | ------ | ------ | ------ | ------ | ------ | -------- |
+| 0    | 1      | 2      | 3      | 4      | 5      | 6        |
+
+排序
+
+| 最新 | 推薦 | 熱門 |
+| ---- | ---- | ---- |
+| 1    | 2    | 3    |
+
+</Route>
 
 ## 梅花网
 
@@ -1077,6 +1121,10 @@ area 分区选项
 更多的 cid 可通过访问[官网](http://home.qutoutiao.net)切换分类，观察 url 获得。
 
 </Route>
+
+## 全现在
+
+<Route author="nczitzk" example="/allnow/column/199" path="/allnow/column/:id" :paramsDesc="['专栏 id']"/>
 
 ## 人人都是产品经理
 
@@ -1335,7 +1383,7 @@ area 分区选项
 
 ### 公众号 (二十次幂来源)
 
-<Route author="sanmmm" example="/wechat/ershicimi/59" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']"/>
+<Route author="sanmmm" example="/wechat/ershicimi/813oxJOl" path="/wechat/ershicimi/:id" :paramsDesc="['公众号id, 打开公众号页, 在 URL 中找到 id']" anticrawler="1"/>
 
 ### 公众号 (外接大脑来源)
 
@@ -1343,7 +1391,7 @@ area 分区选项
 
 ### 公众号栏目 (非推送 & 历史消息)
 
-<Route author="MisteryMonster" example="/wechat/mp/homepage/MzA3MDM3NjE5NQ==/16" path="/wechat/mp/homepage/:biz/:hid/:cid?" :paramsDesc="['公众号id', '分页id', '页内栏目']" radar="1" anticrawler="1">
+<Route author="MisteryMonster" example="/wechat/mp/homepage/MzA3MDM3NjE5NQ==/16" path="/wechat/mp/homepage/:biz/:hid/:cid?" :paramsDesc="['公众号id', '分页id', '页内栏目']" radar="1" rssbud="1" anticrawler="1">
 
 只适用拥有首页模板 (分享链接带有 homepage) 的公众号。例如从公众号分享出来的链接为 <https://mp.weixin.qq.com/mp/homepage?__biz=MzA3MDM3NjE5NQ==&hid=4>，`biz` 为 `MzA3MDM3NjE5NQ==`，`hid` 为 `4`。
 
@@ -1353,7 +1401,7 @@ area 分区选项
 
 ### 公众号文章话题 Tag
 
-<Route author="MisteryMonster" example="/wechat/mp/msgalbum/MzA3MDM3NjE5NQ==/1375870284640911361" path="/wechat/mp/msgalbum/:biz/:aid" :paramsDesc="['公众号id', 'Tag id', ]" radar="1" anticrawler="1">
+<Route author="MisteryMonster" example="/wechat/mp/msgalbum/MzA3MDM3NjE5NQ==/1375870284640911361" path="/wechat/mp/msgalbum/:biz/:aid" :paramsDesc="['公众号id', 'Tag id', ]" radar="1" rssbud="1" anticrawler="1">
 
 一些公众号（如看理想）会在微信文章里添加 Tag ，点入 Tag 的链接如 <https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3MDM3NjE5NQ==&action=getalbum&album_id=1375870284640911361>，其中`biz` 为 `MzA3MDM3NjE5NQ==`，`aid` 为 `1375870284640911361`。
 

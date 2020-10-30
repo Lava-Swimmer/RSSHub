@@ -14,6 +14,12 @@ pageClass: routes
 
 </Route>
 
+## Anki
+
+### Changes
+
+<Route author="nczitzk" example="/anki/changes" path="/anki/changes"/>
+
 ## Apkpure
 
 ### Versions
@@ -102,7 +108,7 @@ pageClass: routes
 
 ### 镜像有新 Build
 
-<Route author="HenryQW" example="/dockerhub/build/wangqiru/ttrss" path="/dockerhub/build/:owner/:image/:tag?" :paramsDesc="['镜像作者', '镜像名称', '镜像标签，默认 latest']" radar="1"/>
+<Route author="HenryQW" example="/dockerhub/build/wangqiru/ttrss" path="/dockerhub/build/:owner/:image/:tag?" :paramsDesc="['镜像作者', '镜像名称', '镜像标签，默认 latest']" radar="1" rssbud="1"/>
 
 ::: warning 注意
 
@@ -196,6 +202,18 @@ pageClass: routes
 
 见 [#playstation](/game.html#playstation)
 
+## QNAP
+
+### Release Notes
+
+<Route author="nczitzk" example="/qnap/release-notes/qts" path="/qnap/release-notes/:id" :paramsDesc="['OS id，见下表']">
+
+| QTS | QuTS hero | QuTScloud | QuWAN Orchestrator | QES | TAS | AfoBot |
+| --- | --------- | --------- | ------------------ | --- | --- | ------ |
+| qts | quts_hero | qutscloud | quwan_orchestrator | qes | tas | afobot |
+
+</Route>
+
 ## Quicker
 
 ### 版本更新
@@ -206,11 +224,17 @@ pageClass: routes
 
 ### 有新路由啦
 
-<Route author="DIYgod" example="/rsshub/routes" path="/rsshub/routes" radar="1"/>
+<Route author="DIYgod" example="/rsshub/routes" path="/rsshub/routes" radar="1" rssbud="1"/>
 
 ### 有新赞助商啦
 
-<Route author="DIYgod" example="/rsshub/sponsors" path="/rsshub/sponsors" radar="1"/>
+<Route author="DIYgod" example="/rsshub/sponsors" path="/rsshub/sponsors" radar="1" rssbud="1"/>
+
+## Sesame
+
+### Release Notes
+
+<Route author="nczitzk" example="/sesame/release_notes" path="/sesame/release_notes"/>
 
 ## sketch.com
 
@@ -278,7 +302,7 @@ pageClass: routes
 
 ### app 更新
 
-<Route author="zytomorrow" example="/pgyer/:app" path="/pgyer/kz-test" :paramsDesc="['app为下载页最后的路径']" radar="1"/>
+<Route author="zytomorrow" example="/pgyer/:app" path="/pgyer/kz-test" :paramsDesc="['app为下载页最后的路径']" radar="1" rssbud="1"/>
 
 ## 腾讯柠檬 Lab
 
