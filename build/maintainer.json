@@ -44,25 +44,18 @@
     "/35photo/new": [
         "nczitzk"
     ],
-    "/36kr/information/:category?": [
-        "nczitzk"
-    ],
     "/36kr/motif/:id": [
         "nczitzk"
     ],
-    "/36kr/newsflashes": [
-        "hillerliao",
+    "/36kr/news/:category?": [
         "nczitzk"
     ],
-    "/36kr/search/articles/:keyword": [
+    "/36kr/newsflashes": [
+        "hillerliao"
+    ],
+    "/36kr/search/article/:keyword": [
         "xyqfer",
         "kt286",
-        "nczitzk"
-    ],
-    "/36kr/search/newsflashes/:keyword": [
-        "nczitzk"
-    ],
-    "/36kr/topics/:id": [
         "nczitzk"
     ],
     "/36kr/user/:id": [
